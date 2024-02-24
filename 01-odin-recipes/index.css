@@ -1,0 +1,46 @@
+
+body {
+	font-family: Geneva, Tahoma, sans-serif;
+	display: flex;
+	flex-direction: column;
+	background-color:aliceblue ;
+	justify-content: center;
+	align-items: center;
+	padding: 100px;
+}
+h1 {
+	text-decoration: underline;
+	margin-top: -33px;
+}
+h2 {
+	margin-bottom: -10px;
+}
+a {
+	text-decoration: none;
+	color: black;
+	margin: 10px;
+	font-smooth: always;
+ text-rendering: optimizeLegibility;
+}
+
+a:hover {
+	font-size: 1.05em;
+	background-color: white;
+	border-radius: 30%;
+	transition: font-size 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 100px;
+	border: thin solid black;
+	padding: 10px;
+	border-radius: 20px;
+	padding-top: 33px;
+}
+
+img {
+	border-radius: 10px;
+}
