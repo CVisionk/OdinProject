@@ -1,0 +1,94 @@
+<script>
+ const choices = ['rock', 'paper', 'scissors'];
+ function getComputerChoice() {
+
+  return choices[Math.floor(Math.random() * 3)];
+
+
+ }
+
+ function valid_input(input){
+  isvalid = false;
+  for(let i=0; i<choices.length; i++)
+  {
+   if(input == choices[i]){
+    isvalid = true;
+   }
+  }
+  return isvalid;
+ }
+
+ function playgame(){
+  let player = 0;
+  let computer=0;
+  alert("🤡 I want to play a game");
+  alert("Venture into the darkness for a game of rock, paper, scissors, spanning five ominous rounds. In this realm of shadows, every choice echoes with fate. Brace yourself for a chilling duel where strategy intertwines with the supernatural. Begin the contest, let fate decide the victor, and may the cunning prevail in this eerie battle of wills.");
+  
+  for(let i=0; i<5; i++){
+
+
+   let userinput = prompt('In a voice as cold as the grave, the shadows around you seem to whisper, "Choose your weapon: rock, paper, or scissors. Decide wisely, for in this silent game of shadows, each choice seals your fate."').replace(/\n/g, "").toLowerCase();
+   while(!valid_input(userinput)){
+    userinput= prompt('he air thickens with an almost palpable tension, and the darkness around you seems to pulsate with a silent, mocking laughter. A voice, colder than the abyss, slices through the gloom, "Your choice has strayed beyond the bounds of fate. Rock, paper, or scissors—these are the edicts of destiny. Choose again, but beware. The shadows are impatient, and they do not forgive easily. ').replace(/\n/g, "").toLowerCase();
+   }
+   let cominput = getComputerChoice();
+   alert(`In the murky depths of darkness, amidst whispers of foreboding, the shadows have spoken: ${cominput}`)
+   const result = (3 + choices.indexOf(userinput) - choices.indexOf(cominput)) % 3;
+
+   //alert(`${result} + player ${choices.indexOf(userinput)} + computer ${choices.indexOf(cominput)} user${userinput} com${cominput}`)
+   if (result === 1) {
+        player++;
+    } else if (result === 2) {
+        computer++;
+    } else {
+      //do nothing
+    }
+  }
+
+
+  if(player<computer){
+   alert('In the deep, echoing silence that follows your choice, a cold shiver runs down your spine. The shadows seem to draw closer, their silent whisper almost like a sigh. "You have LOST," they murmur, a statement that feels heavier than the darkness itself. The game, it seems, was more than just a simple play of chance.')
+  }else if(player>computer){
+   alert('As your choice echoes through the void, a sudden stillness takes hold. From the depths of the shadows, a low, resonant voice breaks the silence, "You have emerged victorious." This victory, it whispers, carries a weight far beyond the game, a triumph that resonates through the very fabric of the darkness. The shadows retreat, yielding to your will, for now.')
+  }else{
+   alert(`The moment stretches, taut as a string on the brink of snapping. An eerie stillness envelops you, and from the depths of the encroaching shadows, a voice emerges, grave and inexorable. "It's a tie," it declares, the words resonating in the space between breaths, as if the very fabric of reality had paused in anticipation. The game remains unresolved, the balance unbroken. This stalemate, whispered by fate itself, hints at forces beyond your understanding, locked in eternal contention. The darkness waits, breath bated, for the next move in this endless dance.`)
+  }
+ }
+playgame();
+alert("RELOAD TO PLAY ANOTHER ROUND")
+/*Hint: it is best practice to link an external .js file
+ but considering no HTML is needed in this project let's ... wing it */
+
+ /*
+ 
+ Alternative function from GPT
+ 
+ function playGame() {
+ const choices = ['rock', 'paper', 'scissors'];
+ let player = 0, computer = 0;
+ alert("🤡 I want to play a game\nVenture into the darkness for a game of rock, paper, scissors, spanning five ominous rounds. In this realm of shadows, every choice echoes with fate. Brace yourself for a chilling duel where strategy intertwines with the supernatural. Begin the contest, let fate decide the victor, and may the cunning prevail in this eerie battle of wills.");
+
+ for (let i = 0; i < 5; i++) {
+     let userInput;
+     do {
+         userInput = prompt('In a voice as cold as the grave, the shadows around you seem to whisper, "Choose your weapon: rock, paper, or scissors. Decide wisely, for in this silent game of shadows, each choice seals your fate."').trim().toLowerCase();
+     } while (!choices.includes(userInput));
+
+     const comInput = choices[Math.floor(Math.random() * 3)];
+     alert(`In the murky depths of darkness, amidst whispers of foreboding, the shadows have spoken: ${comInput}`);
+     
+     const result = (3 + choices.indexOf(userInput) - choices.indexOf(comInput)) % 3;
+     if (result === 1) player++;
+     else if (result === 2) computer++;
+ }
+
+ const outcomes = ['You have LOST', 'You have emerged victorious', 'It\'s a tie'];
+ const messages = [outcomes[0], outcomes[1], `The game remains unresolved, the balance unbroken. This stalemate, whispered by fate itself, hints at forces beyond your understanding, locked in eternal contention. The darkness waits, breath bated, for the next move in this endless dance.`];
+ const winnerMessage = player < computer ? messages[0] : player > computer ? messages[1] : messages[2];
+
+ alert(winnerMessage);
+}
+
+playGame();
+alert("RELOAD TO PLAY ANOTHER ROUND");*/
+</script>
