@@ -7,9 +7,6 @@
  overflow: hidden;
 }
 
-*{
- outline: 1px solid red;
-}
 #logo{
  width: 100px;
  height: 50px;
@@ -49,13 +46,19 @@ nav div {
  font-size: 48px;
  margin: 0;
 }
+#text p {
+ color: #E5E7EB;
+ font-size: 18px;
+ margin: 0;
+}
 
-#button1 {
+button {
  background-color: #3882f6;
  border-radius: 5px;
- transform: scale(1.2);
+ padding: 8px 36px;
+ font-size: 16px;
  box-shadow: none;
- border-color:#3882f6 ;
+ border:none ;
  color: whitesmoke;
 }
 
@@ -68,6 +71,9 @@ nav div {
 
 #random h1{
  text-align: center;
+ color: #1F2937;
+ font-size:36px;
+ font-weight: 900;
 }
 
 
@@ -78,16 +84,88 @@ nav div {
  display: flex;
  align-items: center;
  justify-content: center;
+ color: rgb(81, 78, 78);
+}
+#random_images{
+ width: 100%;
+ height: 70%;
+ border-radius: 10px;
+ overflow: hidden;
 }
 
 figure {
- width: 100px;
- height: 100px;
+ width: 200px;
+ height: 200px;
+ outline:2px yellow solid;
+ 
+}
+
+figure img{
+ width: 100%;
+ height: 100%;
 }
 
 #quote_section {
+ background-color: #E5E7EB;
  outline: gray solid 4px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ height: 60vh;
+ color: #1f2937;
+ font-size: 36px;
+ font-style: italic;
+ font-weight: lighter;
+ padding: 100px;
+}
+
+
+#quote_section div{
+ display: flex;
+ flex-direction: column;
+}
+#quote_section div span {
+ width: 100%;
+ font-weight: bold;
+ display: inline;
+ text-align: right;
+ margin: 0;
+}
+
+#action {
+ width: 100%;
+ height: 55vh;
  display: flex;
  align-items: center;
  justify-content: center;
+ color: gray;
+}
+
+
+
+#button_container{
+ background-color: #3882f6;
+ width: 70%;
+ height: 30%;
+ border-radius: 10px;
+ color: white;
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+}
+
+#button_container button{
+border: 2px solid #E5E7EB;
+
+}
+
+footer {
+ display: flex;
+ width: 100%;
+ height: 100px;
+ background-color: #1F2937;
+ text-align: center;
+ justify-content: center;
+ color: #E5E7EB;
 }
