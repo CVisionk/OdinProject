@@ -13,7 +13,7 @@ body {
 #logo{
  width: 100px;
  height: 50px;
- margin-left: 10px;
+ margin-left: 60px;
 }
 nav {
  display: flex;
@@ -29,7 +29,6 @@ nav div a{
  color:#E5E7EB;
  margin: 10px;
  padding: 10px;
- outline: 2px solid red;
 }
 
 nav div a:hover {
@@ -43,7 +42,6 @@ nav div a:hover {
  height: 70vh;
  justify-content: center;
  align-items: center;
- outline: 2px solid green;
  
 }
 #image{
@@ -55,7 +53,6 @@ nav div a:hover {
 #text{
  width: 400px;
  height: 200px;
- outline: 2px solid blue;
 }
 #text h1{
  color: #F9FAF8;
@@ -82,8 +79,6 @@ button {
 #random {
  width:100%;
  height: 70vh;
- outline: 2px solid black;
- z-index: 1;
 }
 
 #random h1{
@@ -97,7 +92,6 @@ button {
 #image_container{
  width: 100%;
  height: 60vh;
- outline: 3px solid blue;
  display: flex;
  align-items: center;
  justify-content: center;
@@ -113,7 +107,6 @@ button {
 figure {
  width: 200px;
  height: 200px;
- outline:2px yellow solid;
  
 }
 
@@ -124,7 +117,6 @@ figure img{
 
 #quote_section {
  background-color: #E5E7EB;
- outline: gray solid 4px;
  display: flex;
  flex-direction: column;
  align-items: center;
