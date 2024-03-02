@@ -1,12 +1,34 @@
 *{
- outline: 2px solid red;;
+ outline: 2px solid red;
+ box-sizing: border-box;
+ margin: 0px;
 }
 
 body {
  display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 1rem;
 
 }
 
 .btn {
  background-color: cornflowerblue;
+ padding: 10px;
+ border-radius: 5px;
+}
+
+.container {
+ height: 90vh;
+ width: 90vh;
+ outline: 4px solid black;
+ border-radius: 10px;
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+}
+
+.grid_item{
+ border: 1px solid black;
+ content: "";
 }

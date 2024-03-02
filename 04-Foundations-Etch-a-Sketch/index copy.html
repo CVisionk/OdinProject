@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid of Divs</title>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flex-item {
+            flex: 1 0 calc(25% - 10px); /* Three items per row */
+            background-color: #ddd;
+            padding: 10px;
+            box-sizing: border-box;
+            margin: 5px;
+        }
+        * {
+            outline: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+
+<div id="flex-container"></div>
+
+<script>
+    const flexContainer = document.getElementById("flex-container");
+
+    // Define the dimensions of the grid
+    const numRows = 4; // Number of rows
+    const numCols = 4; // Number of columns
+
+    // Set flex container styles
+    flexContainer.style.display = "flex";
+    flexContainer.style.flexWrap = "wrap";
+
+    // Create the grid of div elements
+    for (let i = 0; i < numRows * numCols; i++) {
+        // Create a new div element
+        const divElement = document.createElement("div");
+
+        // Add content or styling if desired
+        divElement.textContent = `Div ${i + 1}`;
+        divElement.classList.add("flex-item");
+
+        // Append the div element to the flex container
+        flexContainer.appendChild(divElement);
+    }
+</script>
+
+</body>
+</html>
