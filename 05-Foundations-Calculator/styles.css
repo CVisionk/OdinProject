@@ -1,0 +1,23 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ background-image: linear-gradient(to top, beige 0%, #252525 100%);
+ background-attachment: fixed;
+}
+
+.calculator{
+ width: 300px;
+ min-width: 300px;
+ box-sizing: border-box;
+ padding: 20px 25px 45px;
+ background: radial-gradient(ellipse farthest-corner at 20% 65%, #5e6478, #161213);
+ 
+}
