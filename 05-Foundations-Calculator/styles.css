@@ -91,9 +91,78 @@ outline: 2px solid red;
  text-overflow: ellipsis;
  font-family: 'digital-7';
  background-image: linear-gradient(-155deg, #44443a 0%, #656f 100%);
-
+ box-shadow:
+ 0 -4px 4px -3px rgba(255, 255, 255, 0.3),
+ 5px 0 3px -5px rgba(255, 255, 255, 0.8),
+ 0 5px 5px -3px rgba(0, 0, 0, 0.5),
+ -3px 0 3px -1px rgba(0, 0, 0, 0.8),
+ inset 0 -5px 3px -3px rgba(0, 0, 0, 0.5),
+ inset 5px 0 5px -2px rgba(0, 0, 0, 0.8);
+ user-select: none;
 }
 
 .calculator-screen-container .calculator-screen::placeholder{
  color: #000;
+}
+
+.calculator .calculator-keyboard{
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ grid-auto-rows: 40px;
+ gap: 15px;
+}
+
+.calculator-keyboard .button{
+ font-size: 30px;
+ padding: 0;
+ border-radius: 7px;
+ border: none;
+ outline: none;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ cursor: pointer;
+ background: linear-gradient(25deg, #525a65, #3b424c);
+ color: rgba(255, 255, 255, 0.8);
+ box-shadow: 
+ inset 2px -1px 1px 0 rgba(255, 255, 255, 0.2),
+ inset -3px 2px 5px 0 rgba(0, 0, 0, 0.2),
+ 4px 1px 1px 0 rgba(0, 0, 0, 0.5),
+ -1px -3px 1px 0 rgba(0, 0, 0, 0.5),
+ 4px -3px 1px 0 rgba(0, 0, 0, 0.5),
+ -1px -1px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.calculator-keyboard .button:active{
+ box-shadow: 
+ inset 2px -1px 1px 0 rgba(255, 255, 255, 0.2),
+ inset -3px 2px 5px 0 rgba(0, 0, 0, 0.2),
+ 3px 1px 1px 0 rgba(0, 0, 0, 0.5),
+ -1px -1px 1px 0 rgba(0, 0, 0, 0.5),
+ 3px -1px 1px 0 rgba(0, 0, 9, 0.5),
+ -1px -1px 5px 0 rgba(0, 0, 0, 0.5),
+ 4px 0 1px 0 rgba(255, 255, 255, 0.3);
+
+ transform: translate(1px, -1px);
+}
+
+.calculator-keyboard .clear{
+ font-size: 22px;
+ background: #A80D2A;
+ color: beige;
+ font-family: sans-serif;
+}
+
+.calculator-keyboard .button.percent, .calculator-keyboard .button.num{
+ font-size: 25px;
+}
+
+.calculator-keyboard .button.minus{
+ padding-bottom: 3px;
+}
+
+.calculator-keyboard .button.dot{
+ font-size: 30px;
+ padding-bottom: 15px;
+
 }
