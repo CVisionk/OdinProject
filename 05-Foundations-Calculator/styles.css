@@ -1,3 +1,9 @@
+
+@font-face{
+ font-family:'digital-7';
+ src: url('digital-7.ttf');
+ }
+
 *{
  margin: 0;
  padding: 0;
@@ -19,5 +25,75 @@ body{
  box-sizing: border-box;
  padding: 20px 25px 45px;
  background: radial-gradient(ellipse farthest-corner at 20% 65%, #5e6478, #161213);
- 
+ border-top-left-radius: 100% 30px;
+ border-top-right-radius: 100% 30px;
+ border-bottom-left-radius: 100% 30px;
+ border-bottom-right-radius: 100% 30px;
+ box-shadow: 
+ 0 0 5px 0 rgba(0, 0, 0, 0.7),
+ 0 0 20px 0 rgba(0, 0, 0, 0.5),
+ 0 0 25px 0 rgba(0, 0, 0, 0.3),
+ 10px 0 4px 10px rgba(0, 0, 0, 0.3),
+ inset 0 0 3px 0 rgba(0, 0, 0, 0.7),
+ inset 0 0 10px 0 rgba(0, 0, 0, 0.5),
+ inset 0 -25px 5px 0 rgba(0, 0, 0, 0.2),
+ inset 0 -5px 10px 0 rgba(255, 255, 255, 0.3);
+outline: 2px solid red;
+}
+
+.calculator .calculator-top{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.calculator-heading .calculator-title {
+ font-size: 25px;
+ font-family: 'Play', 'Russo one', sans-serif;
+ color: #eaeaea;
+ letter-spacing: 1px;
+ margin: 0;
+}
+.calculator-sun-container .calculator-sub-battery {
+ width: 107px;
+ height: 30px;
+ border-radius: 3px;
+ background-color: #3d2115;
+ background-image: repeating-linear-gradient(
+  to right, transparent, 26px,
+  rgba(255, 255, 255, 0.1) 26px,
+  rgba(255, 255, 255, 0.1) 27px);
+
+  box-shadow:
+   0 -3px 5px -3px rgba(255, 255, 255, 0.2),
+   5px 0 3px -5px rgba(255, 255, 255, 0.8),
+   0 2px 5px -2px rgba(0, 0, 0, 0.5),
+   -3px 0 3px -1px rgba(0, 0, 0, 0.8),
+   inset 0 -5px 3px -3px rgba(0, 0, 0, 0.5),
+   inset 5px 0 5px -2px rgba(0, 0, 0, 0.8);
+}
+
+.calculator .calculator-screen-container{
+ margin: 20px 0;
+}
+
+.calculator-screen-container .calculator-screen{
+ background: gray;
+ width: 100%;
+ height: 66px;
+ display: block;
+ border: 0;
+ text-align: right;
+ font-size: 45px;
+ padding: 10px;
+ border-radius: 5px;
+ color: #000;
+ text-overflow: ellipsis;
+ font-family: 'digital-7';
+ background-image: linear-gradient(-155deg, #44443a 0%, #656f 100%);
+
+}
+
+.calculator-screen-container .calculator-screen::placeholder{
+ color: #000;
 }
