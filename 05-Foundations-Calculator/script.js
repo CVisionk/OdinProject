@@ -111,4 +111,3 @@ console.log(clearInput);
 console.log(calculatorScreen.value.length);
 console.log(isNaN("1.3.4"));
 console.log(calculateInput("3.4÷3.12"));
-
